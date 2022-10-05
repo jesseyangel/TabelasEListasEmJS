@@ -2,14 +2,14 @@ var rangel = {nome:"Rangel", vitorias: 2, empates: 1, derrotas: 1, pontos: 0};
 var gabriela = {nome:"Gabriela", vitorias: 1, empates: 1, derrotas: 2, pontos: 0};
 
 function calculaPontos(jogador) {
-    var pontos = (jogador.vitorias * 3) + jogador.empates;
+    var pontos = (jogador.vitorias * 3 ) + jogador.empates;
     return pontos;
 }
 
 rangel.pontos = calculaPontos(rangel);
 gabriela.pontos = calculaPontos(gabriela);
 
-var jogadores = [rangel, gabriela];
+var jogadores = [rangel, gabriela, Casssio];
 
 function exibeJogadoresNaTela(jogadores){
     var elemento = "";
@@ -31,3 +31,10 @@ function exibeJogadoresNaTela(jogadores){
 }
 
 exibeJogadoresNaTela(jogadores);
+
+function adicionarVitoria(i) {
+    var jogador = jogadores[i]
+    jogador.vitorias++
+    jogador.pontos = calculaPontos(jogador)
+    exibeJogadoresNaTela(jogadores)
+}
