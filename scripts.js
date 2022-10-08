@@ -9,7 +9,7 @@ function calculaPontos(jogador) {
 rangel.pontos = calculaPontos(rangel);
 gabriela.pontos = calculaPontos(gabriela);
 
-var jogadores = [rangel, gabriela, Casssio];
+var jogadores = [rangel, gabriela];
 
 function exibeJogadoresNaTela(jogadores){
     var elemento = "";
